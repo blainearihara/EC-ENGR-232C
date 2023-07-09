@@ -1,0 +1,2 @@
+[1] "Community modularity of graph n=1050 and m=1: 0.933"
+[1] "Community modularity of degree sequenced graph n=1050 and m=1: 0.935"

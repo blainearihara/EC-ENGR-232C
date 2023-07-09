@@ -1,0 +1,5 @@
+[1] "n=1050: Slope of linear regression for log-log degree distribution = -0.872"
+[1] "n=1050: Intercept of linear regression for log-log degree distribution = -1.846"
+
+[1] "n=10500: Slope of linear regression for log-log degree distribution = -1.186"
+[1] "n=10500: Intercept of linear regression for log-log degree distribution = -1.260"
