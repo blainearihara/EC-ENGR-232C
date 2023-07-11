@@ -33,6 +33,21 @@ plot(g1, main=sprintf("Preferential Attachment Model \nUndirected Graph with n=%
      vertex.size=4, vertex.label=NA, edge.arrow.size=0.2)
 dev.off()
 
+# plot the degree distribution
+g1_distribution <- degree.distribution(g1)
+g1_dist_ind <- c(1:length(g1_distribution))
+g1_dist_freq <- g1_distribution*n
+g1_dist_df <- data.frame(ind=g1_dist_ind, freq=g1_dist_freq)
+
+# plot bar of the degree distribution
+png(sprintf("Question2_parta_bardist_n=%d,m=%d.png",n,m))
+print(ggplot(g1_dist_df, aes(x=g1_dist_ind, y=g1_dist_freq ))+
+        geom_bar(stat="identity", fill="royalblue", color="black", width=.7)+
+        # geom_text(aes(x=g1_dist_ind, y=g1_dist_freq+10,label=g1_dist_freq),color="black",size=4,show.legend = T)+
+        labs(title=sprintf("Degree distribution for n=%d and m=%d",n,m), x="Degree", y="Frequency")+
+        theme(plot.title = element_text(hjust = 0.5)))
+dev.off()
+
 # Part b ############################################################
 #####################################################################
 print("Question 2 Part b ==================================================")
@@ -43,6 +58,10 @@ png("Question2_partb_communities.png")
 plot(g1, main=sprintf("Preferential Attachment Model \nCommunities in an Undirected Graph with n=%d and m=%d",n,m), 
      mark.groups=groups(g1_communities), vertex.color="gold", vertex.frame.color="black", 
      vertex.size=2, vertex.label="", edge.arrow.size=.2)
+
+# for a more colorful plot
+# plot(g1_communities, g1, main=sprintf("Preferential Attachment Model \nCommunities in an Undirected Graph with n=%d and m=%d",n,m), vertex.color="gold", vertex.frame.color="black", vertex.size=2, vertex.label="", edge.arrow.size=.2)
+
 dev.off()
 
 # find the measured modularity
@@ -82,13 +101,21 @@ png("Question2_partc_communities.png")
 plot(g2, main=sprintf("Preferential Attachment Model \nCommunities in an Undirected Graph with n=%d and m=%d",n,m), 
      mark.groups=groups(g2_communities), vertex.color="gold", vertex.frame.color="black", 
      vertex.size=2, vertex.label="", edge.arrow.size=.2)
+
+# for a more colorful plot
+# plot(g2_communities, g2, main=sprintf("Preferential Attachment Model \nCommunities in an Undirected Graph with n=%d and m=%d",n,m), vertex.color="gold", vertex.frame.color="black", vertex.size=2, vertex.label="", edge.arrow.size=.2)
+
 dev.off()
+
+# find the measured modularity
+g2_communities_modularity <- modularity(g2_communities)
+print(sprintf("Community modularity: %.3f", g2_communities_modularity))
 
 # plot the histogram of communities sizes
 g2_communities_ind <- c(1:length(g2_communities))
 g2_communities_sizes <- as.vector(sizes(g2_communities))
 g2_communities_df <- data.frame(ind=g2_communities_ind, sizes=g2_communities_sizes)
-png("Question2_partc_hist.png")
+png("Question2_partc_hist.png", width=1000, height=600)
 ggplot(g2_communities_df, aes(x=g2_communities_ind, y=g2_communities_sizes))+
   geom_bar(stat="identity", fill="royalblue",color="black", width=.7)+
   labs(title=sprintf("Communities sizes for n=%d and m=%d",n,m), x="Community number", y="Size")+
@@ -195,15 +222,16 @@ for (gi in list(g1,g2)){
   print(ggplot(node_j_degrees_df, aes(x=logx, y=logy))+
     geom_point()+
     geom_abline(intercept=intercept, slope=slope, col="red")+
-    labs(title=sprintf("Log-Log Degree Distribution of node j for n=%d and m=%d",n,m), x="Log(Degree)", y="Log(Probability)")+
+    labs(title=sprintf("Log-Log Degree Distribution of node j for n=%d and m=%d",vcount(gi),m), x="Log(Degree)", y="Log(Probability)")+
     theme(plot.title = element_text(hjust = 0.5)))
   dev.off()
   
   # plot histogram of the node j degree distribution
   node_j_degrees_df <- data.frame(x=node_j_degrees)
   png(sprintf("Question2_parte_hist_nodej_dist_n=%d,m=%d.png",vcount(gi),m))
-  print(ggplot(node_j_degrees_df, aes(x = x)) +
+  print(ggplot(node_j_degrees_df, aes(x = node_j_degrees)) +
     geom_histogram(fill = "royalblue",color="black") +
+    scale_x_continuous(breaks = seq(0, ceiling(max(node_j_degrees_df$x)/10)*10, 5))+
     labs(title=sprintf("Degree distribution for n=%d and m=%d",vcount(gi),m), x="Degree", y="Frequency")+
     theme(plot.title = element_text(hjust = 0.5)))
   dev.off()
@@ -260,6 +288,10 @@ png(sprintf("Question2_parth_plot_n=%d,m=%d.png",n,m))
 plot(g5, main=sprintf("Communities in Undirected Graph with n=%d and m=%d",n,m), 
      mark.groups=groups(g5_communities), vertex.color="gold", vertex.frame.color="black", 
      vertex.size=2, vertex.label="", edge.arrow.size=.2)
+
+# for a more colorful plot
+# plot(g5_communities, g5, main=sprintf("Communities in Undirected Graph with n=%d and m=%d",n,m), vertex.color="gold", vertex.frame.color="black", vertex.size=2, vertex.label="", edge.arrow.size=.2)
+
 dev.off()
 # plot bar of community sizes
 png(sprintf("Question2_parth_bar_n=%d,m=%d.png",n,m))
@@ -285,6 +317,10 @@ png(sprintf("Question2_parth_plot_degseq_n=%d,m=%d.png",n,m))
 plot(g5_degseq, main=sprintf("Communities in Undirected Graph with n=%d and m=%d\n(method=simple.no.multiple)",n,m), 
      mark.groups=groups(g5_degseq_communities), vertex.color="gold", vertex.frame.color="black", 
      vertex.size=2, vertex.label="", edge.arrow.size=.2)
+
+# for a more colorful plot
+# plot(g5_degseq_communities, g5_degseq, main=sprintf("Communities in Undirected Graph with n=%d and m=%d\n(method=simple.no.multiple)",n,m), vertex.color="gold", vertex.frame.color="black", vertex.size=2, vertex.label="", edge.arrow.size=.2)
+
 dev.off()
 
 # plot bar of community sizes
