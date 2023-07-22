@@ -1,0 +1,2 @@
+Nodes of Node 1 personalized subgraph = 348
+Edges of Node 1 personalized subgraph = 2866

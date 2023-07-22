@@ -1,0 +1,16 @@
+Community modularity scores: 
+Fast-Greedy Community modularity for core node 1 = 0.442
+Edge-Betweenness Community Modularity for Core Node 1 = 0.416
+Cluster Infomap Community Modularity for Core Node 1 = 0.418
+Fast-Greedy Community modularity for core node 108 = 0.458
+Edge-Betweenness Community Modularity for Core Node 108 = 0.521
+Cluster Infomap Community Modularity for Core Node 108 = 0.521
+Fast-Greedy Community modularity for core node 349 = 0.246
+Edge-Betweenness Community Modularity for Core Node 349 = 0.151
+Cluster Infomap Community Modularity for Core Node 349 = 0.245
+Fast-Greedy Community modularity for core node 484 = 0.534
+Edge-Betweenness Community Modularity for Core Node 484 = 0.515
+Cluster Infomap Community Modularity for Core Node 484 = 0.543
+Fast-Greedy Community modularity for core node 1087 = 0.148
+Edge-Betweenness Community Modularity for Core Node 1087 = 0.032
+Cluster Infomap Community Modularity for Core Node 1087 = 0.027

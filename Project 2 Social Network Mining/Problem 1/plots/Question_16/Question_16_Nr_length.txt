@@ -1,0 +1,1 @@
+Length of N_r with neighboring nodes of degree 24: 11

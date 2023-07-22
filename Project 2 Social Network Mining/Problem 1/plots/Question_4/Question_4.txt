@@ -1,0 +1,2 @@
+Slope of linear regression for log-log degree distribution = -1.248
+Intercept of linear regression for log-log degree distribution = -0.661

@@ -1,0 +1,60 @@
+Average accuracies for three different friend recommendation algorithms: 
+Node 496 
+Common Neighbor Average Accuracy: 0.307 
+Jaccard Average Accuracy: 0.198 
+Adamic Adar Average Accuracy: 0.287 
+
+Node 578 
+Common Neighbor Average Accuracy: 0.823 
+Jaccard Average Accuracy: 0.823 
+Adamic Adar Average Accuracy: 0.823 
+
+Node 600 
+Common Neighbor Average Accuracy: 0.765 
+Jaccard Average Accuracy: 0.748 
+Adamic Adar Average Accuracy: 0.748 
+
+Node 615 
+Common Neighbor Average Accuracy: 0.697 
+Jaccard Average Accuracy: 0.697 
+Adamic Adar Average Accuracy: 0.697 
+
+Node 618 
+Common Neighbor Average Accuracy: 0.319 
+Jaccard Average Accuracy: 0.419 
+Adamic Adar Average Accuracy: 0.353 
+
+Node 627 
+Common Neighbor Average Accuracy: 0.789 
+Jaccard Average Accuracy: 0.762 
+Adamic Adar Average Accuracy: 0.778 
+
+Node 643 
+Common Neighbor Average Accuracy: 0.779 
+Jaccard Average Accuracy: 0.754 
+Adamic Adar Average Accuracy: 0.765 
+
+Node 658 
+Common Neighbor Average Accuracy: 0.709 
+Jaccard Average Accuracy: 0.709 
+Adamic Adar Average Accuracy: 0.709 
+
+Node 659 
+Common Neighbor Average Accuracy: 0.810 
+Jaccard Average Accuracy: 0.797 
+Adamic Adar Average Accuracy: 0.810 
+
+Node 661 
+Common Neighbor Average Accuracy: 0.783 
+Jaccard Average Accuracy: 0.783 
+Adamic Adar Average Accuracy: 0.783 
+
+Node 662 
+Common Neighbor Average Accuracy: 0.806 
+Jaccard Average Accuracy: 0.806 
+Adamic Adar Average Accuracy: 0.806 
+
+Average Algorithm Accuracy: 
+Common Neighbor Algorithm Accuracy: 0.690 
+Jaccard Average Algorithm: 0.681 
+Adamic Adar Average Algorithm: 0.687 

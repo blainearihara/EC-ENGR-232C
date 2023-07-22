@@ -1,0 +1,41 @@
+Question 13 and 14
+
+Core Node: 1
+Max dispersion: 4975.000
+Max dispersion node: 56
+Max embeddedness: 77.000
+Max embeddedness node: 56
+Max dispersion/embeddedness: 65.056
+Max dispersion/embeddedness node: 322
+
+Core Node: 108
+Max dispersion: 51252.000
+Max dispersion node: 1888
+Max embeddedness: 253.000
+Max embeddedness node: 1888
+Max dispersion/embeddedness: 202.577
+Max dispersion/embeddedness node: 1888
+
+Core Node: 349
+Max dispersion: 8263.000
+Max dispersion node: 376
+Max embeddedness: 100.000
+Max embeddedness node: 376
+Max dispersion/embeddedness: 82.630
+Max dispersion/embeddedness node: 376
+
+Core Node: 484
+Max dispersion: 29839.000
+Max dispersion node: 107
+Max embeddedness: 166.000
+Max embeddedness node: 107
+Max dispersion/embeddedness: 179.753
+Max dispersion/embeddedness node: 107
+
+Core Node: 1087
+Max dispersion: 40969.000
+Max dispersion node: 107
+Max embeddedness: 204.000
+Max embeddedness node: 107
+Max dispersion/embeddedness: 200.828
+Max dispersion/embeddedness node: 107
