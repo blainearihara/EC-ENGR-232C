@@ -1,0 +1,4 @@
+Question 4
+Homogeneity: 0.614
+Completeness: 0.396
+Modularity: 0.884
